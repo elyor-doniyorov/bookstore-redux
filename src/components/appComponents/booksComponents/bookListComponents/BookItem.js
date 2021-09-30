@@ -1,21 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import 'bootstrap/dist/css/bootstrap.css';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../../../redux/books/books';
 import './BookItem.css';
 
 function BookItem(props) {
   const {
-    cat, title, author, prog,
+    id, cat, title, author, prog,
   } = props;
+
+  const dispatch = useDispatch();
+
+  function handleClick(e) {
+    const payload = Number(e.target.dataset.bookid);
+    dispatch(removeBook(payload));
+  }
+
   return (
-    <div className="row  book-item">
+    <div className="row book-item">
       <div className="col">
-        <div className="book-name">{cat}</div>
+        <div className="category-name">{cat}</div>
         <div className="book-title">{title}</div>
-        <div className="book-author">{author}</div>
+        <div className="author-name">{author}</div>
         <div>
           <button type="button">Comments</button>
-          <button type="button">Remove</button>
+          <button type="button" onClick={handleClick} data-bookid={id}>Remove</button>
           <button type="button">Edit</button>
         </div>
       </div>
@@ -25,6 +34,7 @@ function BookItem(props) {
           {prog}
           %
           <br />
+          {' '}
           completed
         </span>
       </div>
@@ -38,6 +48,7 @@ function BookItem(props) {
 }
 
 BookItem.propTypes = {
+  id: PropTypes.number.isRequired,
   cat: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
