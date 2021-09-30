@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../../../../redux/books/books';
-import './BookItem.css';
+import { removeBookAPI } from '../../../../redux/books/books';
 
 function BookItem(props) {
   const {
@@ -13,11 +12,11 @@ function BookItem(props) {
 
   function handleClick(e) {
     const payload = Number(e.target.dataset.bookid);
-    dispatch(removeBook(payload));
+    dispatch(removeBookAPI(payload));
   }
 
   return (
-    <div className="row book-item">
+    <div className="book-item">
       <div className="col">
         <div className="category-name">{cat}</div>
         <div className="book-title">{title}</div>

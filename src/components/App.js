@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Books from './appComponents/Books';
 import store from '../redux/configureStore';
-import Categories from '../redux/categories/categories';
+import Categories from './appComponents/Categories';
 import Header from './appComponents/Header';
 
 function App() {
