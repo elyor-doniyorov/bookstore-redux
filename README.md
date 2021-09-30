@@ -1,23 +1,26 @@
 # BookStore
 This is a React app that stores books. User can add and remove books. 
 
-![Screenshot]()
+![Screenshot](Screenshot.png)
 
 Additional description of the project and its features.
 
 ## 🔴  Live Demo
 
 will be soon
+
 ## Built With
 
-- HTML
-- CSS
 - React
 - Redux
 
 ## Getting Started
 
 To get a local copy up and running follow these simple steps inside the root folder.
+
+## Clone the repo:
+
+- 'git clone' and paste https://github.com/elyor-doniyorov/bookstore-redux.git
 
 ### Setup
 
@@ -48,7 +51,7 @@ it will open `http://localhost:3000/` in your default browser.
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page]().
+Feel free to check the [issues page](https://github.com/elyor-doniyorov/bookstore-redux/issues/3).
 
 ## Show your support
 
