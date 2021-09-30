@@ -1,0 +1,14 @@
+.link {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.brand-name {
+  font-size: larger;
+  font-weight: 600;
+}
+
+.user {
+  float: right;
+  margin-top: -20px;
+}
