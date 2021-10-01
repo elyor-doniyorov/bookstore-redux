@@ -7,7 +7,7 @@ Additional description of the project and its features.
 
 ## 🔴  Live Demo
 
-will be soon
+[Live demo](https://bookstore-react--app.herokuapp.com/)
 
 ## Built With
 
