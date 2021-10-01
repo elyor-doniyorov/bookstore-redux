@@ -1,7 +1,7 @@
 # BookStore
 This is a React app that stores books. User can add and remove books. 
 
-![Screenshot](Screenshot.png)
+![Screenshot](images/Screenshot.png)
 
 Additional description of the project and its features.
 
