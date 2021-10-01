@@ -13,6 +13,7 @@ Additional description of the project and its features.
 
 - React
 - Redux
+- Heroku
 
 ## Getting Started
 
