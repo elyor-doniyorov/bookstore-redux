@@ -3,19 +3,13 @@ const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 const LOAD_BOOKS = 'bookstore/books/LOAD_BOOKS';
 const APP_ID = 'W2TAgTVlPqLEGcqZHoYR';
 
-const defaultState = [
-  {
-    title: 'The Hunger game',
-    category: 'action',
-    author: 'Suzanne Collins',
-    progress: 74,
-  }];
+const defaultState = [];
 
 export default function books(state = defaultState, action) {
   switch (action.type) {
     case LOAD_BOOKS:
       return action.payload.map((bookObject) => ({
-        ...bookObject,
+        ...bookObject, author: 'Suzanne Collins', progress: 74,
       }));
     case ADD_BOOK:
       return state.concat({

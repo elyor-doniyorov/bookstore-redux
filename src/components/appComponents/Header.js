@@ -7,8 +7,8 @@ import './Header.css';
 function Header() {
   return (
     <header>
-      <nav className="row d-flex justify-content-between">
-        <div className="col">
+      <nav className="app-header">
+        <div className="app-nav">
           <Link to="/" className="link brand-name">
             Bookstore CMS
           </Link>
@@ -18,9 +18,7 @@ function Header() {
           <Link to="/categories" className="link nav-link">
             CATEGORIES
           </Link>
-        </div>
-        <div className="col user">
-          <span className="user-icon">
+          <span className="user user-icon">
             <FontAwesomeIcon icon={faUser} />
           </span>
         </div>

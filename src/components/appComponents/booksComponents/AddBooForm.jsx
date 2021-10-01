@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addBookAPI } from '../../../redux/books/books';
 import Form from './Form';
+import './AddBookForm.css';
 
 function AddBookForm() {
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ function AddBookForm() {
 
   return (
     <div>
-      <h2>Add NEW BOOK</h2>
+      <h2 className="Form-title">Add NEW BOOK</h2>
       <Form
         handleChange={(e) => handleChange(e)}
         handleSubmit={(e) => handleSubmit(e)}

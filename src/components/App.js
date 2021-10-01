@@ -1,26 +1,32 @@
-import React from 'react';
-import { Provider } from 'react-redux';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { loadBooksAPI } from '../redux/books/books';
 import Books from './appComponents/Books';
-import store from '../redux/configureStore';
 import Categories from './appComponents/Categories';
 import Header from './appComponents/Header';
+import './App.css';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => dispatch(loadBooksAPI()), []);
   return (
-    <Provider store={store}>
-      <Router>
-        <Header />
-        <Switch>
-          <Route exact path="/">
-            <Books />
-          </Route>
-          <Route path="/categories">
-            <Categories />
-          </Route>
-        </Switch>
-      </Router>
-    </Provider>
+    <div className="bookstore">
+      <div className="panel-bg">
+        <Router>
+          <Header />
+          <div className="header-line" />
+          <Switch>
+            <Route exact path="/">
+              <Books />
+            </Route>
+            <Route path="/categories">
+              <Categories />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
+    </div>
   );
 }
 
