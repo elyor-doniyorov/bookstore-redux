@@ -1,5 +1,5 @@
 # BookStore
-This is a React app that stores books. User can add and remove books. 
+This React app stores books. User can add and remove books. 
 
 ![Screenshot](images/Screenshot.png)
 
